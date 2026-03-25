@@ -1,9 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hey Fin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hey fin</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <p>This is a placeholder.</p>
+
+<body class="theme-clean-light">
+
+    <script>
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "theme-clean-dark" || savedTheme === "theme-clean-light") {
+        document.body.className = savedTheme;
+    }
+    </script>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-left">hey fin</div>
+
+        <div class="nav-center">
+            <a href="index.html">Home</a>
+            <a href="placeholder.html">Portfolio ▾</a>
+            <a href="placeholder.html">Resume</a>
+            <a href="placeholder.html">Dev bLog</a>
+        </div>
+
+        <div class="nav-right">
+            <button id="theme-toggle" type="button">☀ / ☾</button>
+            <a href="placeholder.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>I build games, websites, and data-driven projects.</h1>
+        <p>Mostly, I like making things that work well and feel good to use.</p>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="featured">
+        <h2>Featured Work</h2>
+
+        <div class="projects">
+            <div class="project-card">
+                <h3>A Future Showcase...</h3>
+                <p>But for now, nothing.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Something Coming Soonish</h3>
+                <p>Let's all take a breath and be patient.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>An Idea Made Physical!</h3>
+                <p>Not yet though, got ya.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <h2>About</h2>
+        <p>
+            I work across games, websites, and data projects.<br>
+            <br>
+            Most of what I do sits somewhere between creative and technical: building 
+            things, breaking them, and tearing my hair out figuring out how those things 
+            actually work.<br>
+            <br>
+            Right now, I'm focused on making projects that are both useful and interesting to
+            interact with.
+        </p>
+    </section>
+
+    <!-- DEV BLOG PREVIEW -->
+    <section class="blog-preview">
+        <h2>Latest Dev bLog Posts</h2>
+
+        <div class="posts">
+            <div class="post-card">
+                <h3>Something important enough to write</h3>
+                <p>(Not yet though.)</p>
+            </div>
+
+            <div class="post-card">
+                <h3>Future Content</h3>
+                <p>Emphasis on the "future" part.</p>
+            </div>
+        </div>
+
+        <a href="placeholder.html" class="link-button">View all posts →</a>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="contact">
+        <h2>Want to work together?</h2>
+        <p>Don't be shy, go ahead and reach out.</p>
+        <a href="placeholder.html">Contact me</a>
+    </section>
+
+    <script src="js/main.js"></script>
+
 </body>
 </html>
