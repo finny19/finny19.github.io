@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- Default Favicon -->
+    <link rel="icon" type="image/png" href="/media/icons/favicon-lightmode-32x32.png">
+    <!-- Light mode -->
+    <link rel="icon" type="image/png" href="/media/icons/favicon-lightmode-32x32.png" media="(prefers-color-scheme: light)">
+    <!-- Dark mode -->
+    <link rel="icon" type="image/png" href="/media/icons/favicon-darkmode-32x32.png" media="(prefers-color-scheme: dark)"> 
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="theme-clean-light">
+    <script>
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "theme-clean-light" || savedTheme === "theme-clean-dark") {
+            document.body.className = savedTheme;
+        }
+    </script>
+
+    <nav>
+        <div class="nav-left">hey fin</div>
+
+        <div class="nav-center">
+            <a href="/">Home</a>
+            <a href="/portfolio/">Portfolio ▾</a>
+            <a href="/placeholder/">Resume</a>
+            <a href="/placeholder/">Dev bLog</a>
+        </div>
+
+        <div class="nav-right">
+        <button id="theme-toggle" type="button">*</button>
+        <a href="/placeholder/">Contact</a>
+    </div>
+    </nav>
+
+    <section class="portfolio-hero">
+        <h1>Portfolio</h1>
+        <p>
+            A collection of my games, websites, and other data-driven work. Some of it
+            already exists, the rest I'm still working on.<br>
+            <br>
+            Nothing is here yet, though.
+        </p>
+    </section>
+    
+    <section class="portfolio-controls">
+        <div class="portfolio-search-row">
+            <input
+                type="text"
+                class="portfolio-search"
+                placeholder="Search projects, tools, tags, or whatever else"
+                aria-label="Search projects"
+            >
+
+            <div class="select-wrap">
+                <select class="portfolio-main-filter" aria-label="Filter by project type">
+                    <option>All Projects</option>
+                    <option>Games</option>
+                    <option>Websites</option>
+                    <option>Data & Analysis</option>
+                </select>
+            </div>
+
+            <div class="advanced-filter">
+                <div class="select-wrap">
+                    <button type="button" class="advanced-filter-toggle" id="advanced-filter-toggle">
+                        Advanced Search
+                    </button>
+                </div>
+                <div class="advanced-filter-menu" id="advanced-filter-menu" hidden>
+                    <label><input type="checkbox"> HTML</label>
+                    <label><input type="checkbox"> CSS</label>
+                    <label><input type="checkbox"> JavaScript</label>
+                    <label><input type="checkbox"> Python</label>
+                    <label><input type="checkbox"> C#</label>
+                    <label><input type="checkbox"> R</label>
+                    <label><input type="checkbox"> Kaggle</label>
+                    <label><input type="checkbox"> Game Design</label>
+                    <label><input type="checkbox"> Data Visualization</label>
+                    <label><input type="checkbox"> Unity</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-list">
+        <div class="portfolio-grid">
+            <article class="project-card">
+                <h3>A Real Project Will Be Here</h3>
+                <p>This'll eventually lead somewhere useful, but not yet.</p>
+                <div class="project-meta">
+                    <span class="meta-tag">Game</span>
+                    <span class="meta-tag">Unity</span>
+                    <span class="meta-tag">C#</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <h3>Data, Analysis, and Other Stuff.</h3>
+                <p>But this button will take you to the void for now.</p>
+                <div class="project-meta">
+                    <span class="meta-tag">Data & Analysis</span>
+                    <span class="meta-tag">Python</span>
+                    <span class="meta-tag">Kaggle</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <h3>Something. Probably.</h3>
+                <p>It's not ready yet, which is pretty on brand.</p>
+                <div class="project-meta">
+                    <span class="meta-tag">Game</span>
+                    <span class="meta-tag">Unity</span>
+                    <span class="meta-tag">C#</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

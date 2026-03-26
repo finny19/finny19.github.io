@@ -11,6 +11,10 @@ body {
     box-sizing: border-box;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 /* THEMES */
 
 .theme-clean-dark {
@@ -92,13 +96,11 @@ section {
     margin: auto;
 }
 
-/* HERO */
+/* --- HOME PAGE --- */
 
 .hero h1 {
     font-size: 2.5rem;
 }
-
-/* PROJECT CARDS */
 
 .projects {
     display: flex;
@@ -108,10 +110,8 @@ section {
 .project-card {
     border: 1px solid var(--border);
     padding: 1rem;
-    flex: 1;
+    box-sizing: border-box;
 }
-
-/* BLOG */
 
 .posts {
     display: flex;
@@ -123,8 +123,6 @@ section {
     padding: 1rem;
     flex: 1;
 }
-
-/* CONTACT */
 
 .contact a {
     display: inline-block;
@@ -140,8 +138,6 @@ section {
     background: var(--button-hover-bg);
     border-color: var(--button-hover-border);
 }
-
-/* PLAINTEXT BUTTON */
 
 .link-button {
     display: inline-block;
@@ -161,7 +157,7 @@ section {
     transform: translateY(-2px);
 }
 
-/* PLACEHOLDER PAGE */
+/* --- PLACEHOLDER PAGE --- */
 
 .placeholder {
     min-height: 100vh;
@@ -198,4 +194,161 @@ section {
     background: var(--button-hover-bg);
     border-color: var(--button-hover-border);
     transform: translateY(-2px);
+}
+
+/* --- PORTFOLIO PAGE --- */
+
+.portfolio-hero p {
+    max-width: 700px;
+    color: var(--muted-text);
+    line-height: 1.6;
+}
+
+.portfolio-controls {
+    padding-top: 0;
+}
+
+.portfolio-search-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+}
+
+.porfolio-search,
+.portfolio-main-filter,
+.advanced-filter-toggle {
+    font: inherit;
+    color: var(--text);
+    background: var(--button-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.85rem 1rem;
+    box-sizing: border-box;
+    height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+.portfolio-search {
+    flex: 1 1 320px;
+    min-width: 260px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--button-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0 1rem;
+    height: 44px;
+    outline: none;
+}
+
+.portfolio-search::placeholder {
+    color: var(--muted-text);
+    opacity: 1;
+}
+
+.portfolio-search:hover,
+.portfolio-main-filter:hover,
+.advanced-filter-toggle:hover {
+    border-color: var(--button-hover-border);
+    background: var(--button-hover-bg);
+}
+
+.portfolio-main-filter {
+    height: 44px;
+    padding: 0 1rem;
+    padding-right: 2.5rem;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.advanced-filter {
+    width: 100%;
+}
+
+.advanced-filter-toggle {
+    height: 44px;
+    padding: 0 2.5rem 0 1rem;
+    position: relative;
+}
+
+.advanced-filter summary {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.advanced-filter-menu {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: var(--bg);
+    display: grid;
+    gap: 0.75rem;
+}
+
+.advanced-filter-menu label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text);
+}
+
+.advanced-filter-menu input[type="checkbox"] {
+    accent-color: currentColor;
+}
+
+.portfolio-grid {
+    display: grid;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top:  1rem;
+}
+
+.meta-tag {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--button-bg);
+    color: var(--muted-text);
+    font-size: 0.9rem;
+}
+
+.portfolio-search:focus,
+.portfolio-main-filter:focus,
+.advanced-filter summary:focus {
+    outline: none;
+    border-color: var(--button-hover-border);
+    background: var(--buttq);
+}
+
+.portfolio-search:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px var(--button-bg) inset;
+    -webkit-text-fill-color: var(--text);
+}
+
+.select-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.select-wrap::after {
+    content: "▾";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text);
+    pointer-events: none;
 }
